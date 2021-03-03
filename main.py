@@ -21,4 +21,3 @@ while running:
             if event.button == 1:
                 mx, my = pygame.mouse.get_pos()
                 plants.Plant(screen, mx, my)
-

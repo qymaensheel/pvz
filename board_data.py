@@ -11,3 +11,7 @@ lanes = 5
 # Field Size
 fieldX = (Xmax - Xmin) / fields
 fieldY = (Ymax - Ymin) / lanes
+
+
+# Array of Plants
+board = [[0]*fields for i in range(lanes)]

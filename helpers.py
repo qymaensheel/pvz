@@ -1,29 +1,29 @@
 import pygame
-import params
+import board_data
 
 
 def getGridCoords(mx, my):
 
-    if mx < params.Xmin:
+    if mx < board_data.Xmin:
         return 0, 0
-    if mx > params.Xmax:
+    if mx > board_data.Xmax:
         return 0, 0
-    if my < params.Ymin:
+    if my < board_data.Ymin:
         return 0, 0
-    if my > params.Ymax:
+    if my > board_data.Ymax:
         return 0, 0
     # mouse x: 250 - 950 (0 - 700)
-    tempX = params.Xmin
+    tempX = board_data.Xmin
     X = 0
     while tempX < mx:
-        tempX = tempX + params.fieldX
+        tempX = tempX + board_data.fieldX
         X = X + 1
 
     # mouse y:  70 - 550 (0 - 480)
-    tempY = params.Ymin
+    tempY = board_data.Ymin
     Y = 0
     while tempY < my:
-        tempY = tempY + params.fieldY
+        tempY = tempY + board_data.fieldY
         Y = Y + 1
 
     return X, Y
