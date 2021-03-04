@@ -2,6 +2,9 @@ import pygame
 import board_data
 
 
+generationTime = 10000
+
+
 def getGridCoords(mx, my):
 
     if mx < board_data.Xmin:
