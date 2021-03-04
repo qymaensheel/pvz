@@ -5,6 +5,23 @@ import helpers
 
 suns = pygame.sprite.Group()
 
+balance = 100  # starting bank balance
+
+
+def balanceBgDisplay(screen):
+    balanceBg = pygame.Surface((200, 28))
+    balanceBg.fill((255, 255, 255))
+    screen.blit(balanceBg, (190, 575))
+
+
+def balanceDisplay(screen, balanceValue):
+    black = (0, 0, 0)
+    font = pygame.font.SysFont("Times New Roman", 24)
+    balanceLabel = font.render("Your balance:", True, black)
+    balanceValue = font.render(str(balance), True, black)
+    screen.blit(balanceLabel, (200, 575))
+    screen.blit(balanceValue, (340, 575))
+
 
 class Sun(pygame.sprite.Sprite):
     sunSize = 50
